@@ -61,6 +61,7 @@ The backend is designed to be scalable, testable, and easy to integrate with a m
 
 ## 📂 Project Structure
 
+```
 sweet-shop-backend/
 │
 ├── src/
@@ -126,6 +127,8 @@ sweet-shop-backend/
 │
 ├── pom.xml
 └── README.md
+```
+
 
 ---
 
