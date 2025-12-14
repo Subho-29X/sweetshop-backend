@@ -207,22 +207,31 @@ Mockito is used to mock dependencies
 
 Tests were written following TDD principles
 
-📸 Screenshots
-Screenshots of the application in action (API testing via Postman / Thunder Client) will be added here:
+## 📸 Screenshots
 
-### User Registration & Login
-<img src="https://github.com/user-attachments/assets/bf7f56da-070c-4d4f-9881-64ced4466de9" width="800"/>
+Screenshots of the application in action (API testing via Postman / Thunder Client):
 
-<img src="https://github.com/user-attachments/assets/57fa3f12-fe67-4d1f-ab56-66a067814332" width="800"/>
+---
 
-### Fetching Sweets
-<img src="https://github.com/user-attachments/assets/cecb382f-d72c-48ea-a8cf-7bd927b5dc76" width="800"/>
+### 🔐 User Registration & Login
+![User Registration](https://github.com/user-attachments/assets/bf7f56da-070c-4d4f-9881-64ced4466de9)
+![User Login](https://github.com/user-attachments/assets/57fa3f12-fe67-4d1f-ab56-66a067814332)
 
-### Purchasing a Sweet
-<img src="https://github.com/user-attachments/assets/384ca680-e809-4c0f-ad8c-886d8cb20697" width="400"/>
+---
 
-### Restocking Inventory (Admin)
-<img src="https://github.com/user-attachments/assets/c5818c23-d4ca-4713-b78b-055e1e928e52" width="800"/>
+### 🍭 Fetching Sweets
+![Fetching Sweets](https://github.com/user-attachments/assets/cecb382f-d72c-48ea-a8cf-7bd927b5dc76)
+
+---
+
+### 🛒 Purchasing a Sweet
+![Purchase Sweet](https://github.com/user-attachments/assets/384ca680-e809-4c0f-ad8c-886d8cb20697)
+
+---
+
+### 📦 Restocking Inventory (Admin)
+![Restock Inventory](https://github.com/user-attachments/assets/c5818c23-d4ca-4713-b78b-055e1e928e52)
+
 
 🤖 My AI Usage
 AI Tools Used
