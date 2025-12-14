@@ -42,7 +42,8 @@ public class AuthServiceTest {
 
         when(passwordEncoder.encode("12345")).thenReturn("encoded123");
         when(userRepository.save(any(User.class))).thenReturn(saved);
-        when(jwtService.generateToken(saved)).thenReturn("mock-token");
+        when(jwtService.generateToken(any(User.class))).thenReturn("mock-token");
+
 
         String result = authService.register(req);
 

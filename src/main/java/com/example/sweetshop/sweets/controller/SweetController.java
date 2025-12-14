@@ -18,6 +18,10 @@ public class SweetController {
         return ResponseEntity.ok(sweetService.addSweet(request));
     }
 
+//    @GetMapping("/{id}") // 🔥 THIS FIXES EDIT
+//    public ResponseEntity<Sweet> getSweetById(@PathVariable Long id) {
+//        return ResponseEntity.ok(sweetService.getById(id));
+//    }
     @GetMapping
     public ResponseEntity<?> getAllSweets() {
         return ResponseEntity.ok(sweetService.getAllSweets());
