@@ -211,13 +211,14 @@ Tests were written following TDD principles
 Screenshots of the application in action (API testing via Postman / Thunder Client) will be added here:
 
 User registration and login
-
+<img width="1470" height="353" alt="Screenshot 2025-12-14 at 1 40 36 PM" src="https://github.com/user-attachments/assets/bf7f56da-070c-4d4f-9881-64ced4466de9" />
+<img width="1470" height="266" alt="Screenshot 2025-12-14 at 1 41 46 PM" src="https://github.com/user-attachments/assets/57fa3f12-fe67-4d1f-ab56-66a067814332" />
 Fetching sweets
-
+<img width="1453" height="788" alt="Screenshot 2025-12-14 at 1 45 00 PM" src="https://github.com/user-attachments/assets/cecb382f-d72c-48ea-a8cf-7bd927b5dc76" />
 Purchasing a sweet
-
+<img width="320" height="338" alt="Screenshot 2025-12-14 at 1 46 01 PM" src="https://github.com/user-attachments/assets/384ca680-e809-4c0f-ad8c-886d8cb20697" />
 Restocking inventory (Admin)
-
+<img width="1468" height="877" alt="Screenshot 2025-12-14 at 1 46 41 PM" src="https://github.com/user-attachments/assets/c5818c23-d4ca-4713-b78b-055e1e928e52" />
 🤖 My AI Usage
 AI Tools Used
 ChatGPT
