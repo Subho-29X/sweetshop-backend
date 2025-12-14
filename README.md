@@ -120,7 +120,8 @@ sweet-shop-backend/
 │   │   │   │   └── SweetServiceTest.java
 │   │   │   ├── inventory/
 │   │   │   │   └── InventoryServiceTest.java
-│   │   │   
+│   │   │
+│   │   └── resources/
 │   │       └── application-test.properties
 │
 ├── pom.xml
