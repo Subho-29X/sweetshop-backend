@@ -1,13 +1,10 @@
 package com.example.sweetshop.config;
 
-import com.example.sweetshop.config.JwtAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -31,15 +28,28 @@ public class SecurityConfig {
         http
                 .cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
+
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()
-//                        .requestMatchers(HttpMethod.GET, "/api/sweets").permitAll()
-//                                .requestMatchers("/api/sweets/search").permitAll()
+
+                        .requestMatchers("/api/auth/register", "/api/auth/login")
+                        .permitAll()
+
+                        .requestMatchers("/api/auth/make-admin/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/sweets").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/sweets/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/sweets/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/sweets/*/restock").hasRole("ADMIN")   // FIXED
+
+                        .requestMatchers(HttpMethod.GET, "/api/sweets/**").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/api/sweets/*/purchase").authenticated()
+
                         .anyRequest().authenticated()
                 )
+
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
+
                 .userDetailsService(userDetailsService)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
@@ -55,5 +65,4 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-
 }

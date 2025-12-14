@@ -1,3 +1,5 @@
+
+
 package com.example.sweetshop.auth.service;
 
 import com.example.sweetshop.auth.dto.LoginRequest;
@@ -26,7 +28,7 @@ public class AuthService {
         user.setName(request.getName());
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setRole(Role.USER);
+        user.setRole(Role.USER); // default role
 
         userRepository.save(user);
 
@@ -46,5 +48,13 @@ public class AuthService {
                 .orElseThrow();
 
         return jwtService.generateToken(user);
+    }
+
+    public void makeAdmin(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        user.setRole(Role.ADMIN);
+        userRepository.save(user);
     }
 }

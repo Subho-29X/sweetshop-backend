@@ -1,3 +1,4 @@
+
 package com.example.sweetshop.auth.controller;
 
 import com.example.sweetshop.auth.dto.LoginRequest;
@@ -23,4 +24,12 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         return ResponseEntity.ok(authService.login(request));
     }
+
+
+    @PostMapping("/make-admin/{id}")
+    public ResponseEntity<?> makeAdmin(@PathVariable Long id) {
+        authService.makeAdmin(id);  // call method (returns void)
+        return ResponseEntity.ok("User promoted to ADMIN");
+    }
+
 }
